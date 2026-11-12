@@ -13,6 +13,6 @@ try {
     http_response_code(500);
     echo '<h1>Database tidak dapat terhubung</h1>';
     echo '<p>Maaf, website belum bisa terhubung ke database. Silakan pastikan MySQL sudah aktif dan database <b>ruang_hukum</b> sudah tersedia. Jika masih mengalami masalah, periksa kembali pengaturan koneksi database pada file <code>config/database.php</code>.</p>';
-    die("Error dari Sistem: " . $e->getMessage());
+    die("Error dari Sistem: " . $error->getMessage());
     exit;
 }
