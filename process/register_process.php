@@ -65,6 +65,8 @@ try {
 } catch (PDOException $exception) {
     setFlash('error', 'Username atau email sudah dipakai.');
     redirect('../register.php');
+    echo "Error PDO: " . $e->getMessage(); // Tambahkan baris ini
+    // ... pesan kustom Anda ...
 }
 
 session_regenerate_id(true);
